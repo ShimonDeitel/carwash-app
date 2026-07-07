@@ -1,0 +1,27 @@
+{
+  "identifier" : "Carwash",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "carwash.pro.unlock",
+      "localizations" : [
+        {
+          "description" : "Annual spend total and membership vs pay-per-wash comparison",
+          "displayName" : "Carwash Pro",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "carwash.pro.unlock",
+      "referenceName" : "Carwash Pro Unlock",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {},
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

@@ -1,0 +1,68 @@
+name: Carwash
+options:
+  bundleIdPrefix: com.shimondeitel
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    DEVELOPMENT_TEAM: W7Q885Q59C
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    TARGETED_DEVICE_FAMILY: "1"
+targets:
+  Carwash:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Carwash
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shimondeitel.carwashlog
+        GENERATE_INFOPLIST_FILE: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        MARKETING_VERSION: "1.0"
+        DEVELOPMENT_TEAM: W7Q885Q59C
+    info:
+      path: Carwash/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+  CarwashTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: CarwashTests
+    dependencies:
+      - target: Carwash
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shimondeitel.carwashlog.tests
+        DEVELOPMENT_TEAM: W7Q885Q59C
+  CarwashUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: CarwashUITests
+    dependencies:
+      - target: Carwash
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shimondeitel.carwashlog.uitests
+        DEVELOPMENT_TEAM: W7Q885Q59C
+schemes:
+  Carwash:
+    build:
+      targets:
+        Carwash: all
+    test:
+      targets:
+        - CarwashTests
+        - CarwashUITests
+    run:
+      config: Debug
